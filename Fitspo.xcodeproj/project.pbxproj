@@ -14,6 +14,8 @@
 		C61FBF542F161F370043920A /* FitspoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61FBF532F161F370043920A /* FitspoTests.swift */; };
 		C61FBF5E2F161F370043920A /* FitspoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61FBF5D2F161F370043920A /* FitspoUITests.swift */; };
 		C61FBF602F161F370043920A /* FitspoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61FBF5F2F161F370043920A /* FitspoUITestsLaunchTests.swift */; };
+		C61FBF732F1620B70043920A /* Outfit.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61FBF722F1620B70043920A /* Outfit.swift */; };
+		C61FBF752F1621080043920A /* OutfitCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61FBF742F1621080043920A /* OutfitCardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,9 @@
 		C61FBF592F161F370043920A /* FitspoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FitspoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C61FBF5D2F161F370043920A /* FitspoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitspoUITests.swift; sourceTree = "<group>"; };
 		C61FBF5F2F161F370043920A /* FitspoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitspoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C61FBF722F1620B70043920A /* Outfit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Outfit.swift; sourceTree = "<group>"; };
+		C61FBF742F1621080043920A /* OutfitCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutfitCardView.swift; sourceTree = "<group>"; };
+		C61FBF762F1624A40043920A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,8 +80,6 @@
 			isa = PBXGroup;
 			children = (
 				C61FBF412F161F350043920A /* Fitspo */,
-				C61FBF522F161F370043920A /* FitspoTests */,
-				C61FBF5C2F161F370043920A /* FitspoUITests */,
 				C61FBF402F161F350043920A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -94,10 +97,17 @@
 		C61FBF412F161F350043920A /* Fitspo */ = {
 			isa = PBXGroup;
 			children = (
+				C61FBF5C2F161F370043920A /* FitspoUITests */,
+				C61FBF522F161F370043920A /* FitspoTests */,
+				C61FBF712F1620800043920A /* Resources */,
+				C61FBF702F16207C0043920A /* Services */,
+				C61FBF6F2F1620780043920A /* Models */,
+				C61FBF6E2F1620720043920A /* ViewModels */,
+				C61FBF6D2F1620570043920A /* Views */,
 				C61FBF422F161F350043920A /* FitspoApp.swift */,
-				C61FBF442F161F350043920A /* ContentView.swift */,
 				C61FBF462F161F370043920A /* Assets.xcassets */,
 				C61FBF482F161F370043920A /* Preview Content */,
+				C61FBF762F1624A40043920A /* README.md */,
 			);
 			path = Fitspo;
 			sourceTree = "<group>";
@@ -125,6 +135,44 @@
 				C61FBF5F2F161F370043920A /* FitspoUITestsLaunchTests.swift */,
 			);
 			path = FitspoUITests;
+			sourceTree = "<group>";
+		};
+		C61FBF6D2F1620570043920A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C61FBF442F161F350043920A /* ContentView.swift */,
+				C61FBF742F1621080043920A /* OutfitCardView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C61FBF6E2F1620720043920A /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		C61FBF6F2F1620780043920A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C61FBF722F1620B70043920A /* Outfit.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C61FBF702F16207C0043920A /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		C61FBF712F1620800043920A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,6 +307,8 @@
 			files = (
 				C61FBF452F161F350043920A /* ContentView.swift in Sources */,
 				C61FBF432F161F350043920A /* FitspoApp.swift in Sources */,
+				C61FBF732F1620B70043920A /* Outfit.swift in Sources */,
+				C61FBF752F1621080043920A /* OutfitCardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
