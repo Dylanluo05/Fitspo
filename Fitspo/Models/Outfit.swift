@@ -11,4 +11,5 @@ struct Outfit: Identifiable {
     let imageName: String
     let title: String
     let tags: [String]
+    var isSaved: Bool = false
 }

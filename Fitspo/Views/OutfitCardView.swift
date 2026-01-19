@@ -13,12 +13,20 @@ struct OutfitCardView: View {
     
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
-            Image(outfit.imageName)
-                .resizable()
-                .scaledToFill()
-                .frame(height: 280)
-                .clipped()
-                .cornerRadius(12)
+            ZStack(alignment: .topTrailing) {
+                Image(outfit.imageName)
+                    .resizable()
+                    .scaledToFill()
+                    .frame(height: 280)
+                    .clipped()
+                    .cornerRadius(12)
+                
+                Image(systemName: "bookmark")
+                    .padding(10)
+                    .background(.ultraThinMaterial)
+                    .clipShape(Circle())
+                    .padding()
+            }
             
             Text(outfit.title)
                 .font(.headline)

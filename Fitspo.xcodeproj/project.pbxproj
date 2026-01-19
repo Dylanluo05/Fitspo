@@ -16,6 +16,7 @@
 		C61FBF602F161F370043920A /* FitspoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61FBF5F2F161F370043920A /* FitspoUITestsLaunchTests.swift */; };
 		C61FBF732F1620B70043920A /* Outfit.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61FBF722F1620B70043920A /* Outfit.swift */; };
 		C61FBF752F1621080043920A /* OutfitCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61FBF742F1621080043920A /* OutfitCardView.swift */; };
+		C637E2A12F1EBE2F00A0BEDC /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C637E2A02F1EBE2F00A0BEDC /* FeedViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		C61FBF722F1620B70043920A /* Outfit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Outfit.swift; sourceTree = "<group>"; };
 		C61FBF742F1621080043920A /* OutfitCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutfitCardView.swift; sourceTree = "<group>"; };
 		C61FBF762F1624A40043920A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		C637E2A02F1EBE2F00A0BEDC /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +151,7 @@
 		C61FBF6E2F1620720043920A /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				C637E2A02F1EBE2F00A0BEDC /* FeedViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -305,6 +308,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C637E2A12F1EBE2F00A0BEDC /* FeedViewModel.swift in Sources */,
 				C61FBF452F161F350043920A /* ContentView.swift in Sources */,
 				C61FBF432F161F350043920A /* FitspoApp.swift in Sources */,
 				C61FBF732F1620B70043920A /* Outfit.swift in Sources */,
