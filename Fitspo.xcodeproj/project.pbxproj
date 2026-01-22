@@ -17,6 +17,9 @@
 		C61FBF732F1620B70043920A /* Outfit.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61FBF722F1620B70043920A /* Outfit.swift */; };
 		C61FBF752F1621080043920A /* OutfitCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61FBF742F1621080043920A /* OutfitCardView.swift */; };
 		C637E2A12F1EBE2F00A0BEDC /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C637E2A02F1EBE2F00A0BEDC /* FeedViewModel.swift */; };
+		C637E2A32F22D2B700A0BEDC /* AppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C637E2A22F22D2B700A0BEDC /* AppViewModel.swift */; };
+		C637E2A52F22D59100A0BEDC /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C637E2A42F22D59100A0BEDC /* FeedView.swift */; };
+		C637E2A72F22D72700A0BEDC /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C637E2A62F22D72700A0BEDC /* ProfileView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,9 @@
 		C61FBF742F1621080043920A /* OutfitCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutfitCardView.swift; sourceTree = "<group>"; };
 		C61FBF762F1624A40043920A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		C637E2A02F1EBE2F00A0BEDC /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
+		C637E2A22F22D2B700A0BEDC /* AppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewModel.swift; sourceTree = "<group>"; };
+		C637E2A42F22D59100A0BEDC /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
+		C637E2A62F22D72700A0BEDC /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +150,8 @@
 			children = (
 				C61FBF442F161F350043920A /* ContentView.swift */,
 				C61FBF742F1621080043920A /* OutfitCardView.swift */,
+				C637E2A42F22D59100A0BEDC /* FeedView.swift */,
+				C637E2A62F22D72700A0BEDC /* ProfileView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -152,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				C637E2A02F1EBE2F00A0BEDC /* FeedViewModel.swift */,
+				C637E2A22F22D2B700A0BEDC /* AppViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -308,8 +317,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C637E2A72F22D72700A0BEDC /* ProfileView.swift in Sources */,
+				C637E2A52F22D59100A0BEDC /* FeedView.swift in Sources */,
 				C637E2A12F1EBE2F00A0BEDC /* FeedViewModel.swift in Sources */,
 				C61FBF452F161F350043920A /* ContentView.swift in Sources */,
+				C637E2A32F22D2B700A0BEDC /* AppViewModel.swift in Sources */,
 				C61FBF432F161F350043920A /* FitspoApp.swift in Sources */,
 				C61FBF732F1620B70043920A /* Outfit.swift in Sources */,
 				C61FBF752F1621080043920A /* OutfitCardView.swift in Sources */,

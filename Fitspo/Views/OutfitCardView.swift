@@ -10,6 +10,7 @@ import SwiftUI
 
 struct OutfitCardView: View {
     let outfit: Outfit
+    @EnvironmentObject var appViewModel: AppViewModel
     
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
@@ -21,11 +22,16 @@ struct OutfitCardView: View {
                     .clipped()
                     .cornerRadius(12)
                 
-                Image(systemName: "bookmark")
-                    .padding(10)
-                    .background(.ultraThinMaterial)
-                    .clipShape(Circle())
-                    .padding()
+                Button {
+                    appViewModel.toggleSave(for: outfit)
+                } label: {
+                    Image(systemName: outfit.isSaved ? "bookmark.fill" : "bookmark")
+                        .foregroundColor(.black)
+                        .padding(10)
+                        .background(.ultraThinMaterial)
+                        .clipShape(Circle())
+                        .padding()
+                }
             }
             
             Text(outfit.title)

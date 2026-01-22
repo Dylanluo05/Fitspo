@@ -9,9 +9,20 @@ import SwiftUI
 
 @main
 struct FitspoApp: App {
+    @StateObject private var appViewModel = AppViewModel()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TabView {
+                FeedView().tabItem {
+                    Label("Feed", systemImage: "house")
+                }
+                
+                ProfileView().tabItem {
+                    Label("Profile", systemImage: "person")
+                }
+            }
+            .enviromentObject(appViewModel)
         }
     }
 }
