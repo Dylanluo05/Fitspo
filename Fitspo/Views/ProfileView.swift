@@ -9,25 +9,37 @@ import Foundation
 import SwiftUI
 
 struct ProfileView: View {
-    @EnvironmentObject var appViewModel: AppViewModel
+
+    @EnvironmentObject var authViewModel: AuthViewModel
+    @State private var showLogoutAlert = false
     
     var body: some View {
         NavigationStack {
-            ScrollView {
-                if appViewModel.savedOutfits.isEmpty {
-                    Text("No saved outfits yet")
-                        .foregroundColor(.gray)
-                        .padding()
-                } else {
-                    VStack(spacing: 20) {
-                        ForEach(appViewModel.savedOutfits) {
-                            outfit in OutfitCardView(outfit: outfit)
-                        }
-                    }
-                    .padding()
+            VStack(spacing: 20) {
+                
+                Text("Profile")
+                    .font(.largeTitle)
+                    .bold()
+                
+                Button(role: .destructive) {
+                    showLogoutAlert = true
+                } label: {
+                    Text("Log Out")
+                        .frame(maxWidth: .infinity)
                 }
+                .buttonStyle(.borderedProminent)
+                
+                Spacer()
             }
-            .navigationTitle("Saved")
+            .padding()
+            .navigationTitle("Profile")
+            .alert("Are you sure you want to log out?",
+                   isPresented: $showLogoutAlert) {
+                Button("Log Out", role: .destructive) {
+                    authViewModel.logout()
+                }
+                Button("Cancel", role: .cancel) { }
+            }
         }
     }
 }

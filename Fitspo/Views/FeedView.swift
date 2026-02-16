@@ -5,23 +5,23 @@
 //  Created by Dylan Luo on 1/22/26.
 //
 
-import Foundation
 import SwiftUI
 
 struct FeedView: View {
-    @EnvironmentObject var appViewModel: AppViewModel
+    
+    @StateObject private var viewModel = FeedViewModel()
     
     var body: some View {
         NavigationStack {
             ScrollView {
                 VStack(spacing: 20) {
-                    ForEach(appViewModel.outfits) {
-                        outfit in OutfitCardView(outfit: outfit)
+                    ForEach(viewModel.posts) { post in
+                        PostCard(post: post)
                     }
                 }
                 .padding()
             }
-            .navigationTitle("Inspiration")
+            .navigationTitle("Feed")
         }
     }
 }

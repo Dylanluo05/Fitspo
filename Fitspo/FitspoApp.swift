@@ -6,23 +6,21 @@
 //
 
 import SwiftUI
+import Firebase
 
 @main
 struct FitspoApp: App {
-    @StateObject private var appViewModel = AppViewModel()
+    
+    @StateObject private var authViewModel = AuthViewModel()
+
+    init() {
+        FirebaseApp.configure()
+    }
     
     var body: some Scene {
         WindowGroup {
-            TabView {
-                FeedView().tabItem {
-                    Label("Feed", systemImage: "house")
-                }
-                
-                ProfileView().tabItem {
-                    Label("Profile", systemImage: "person")
-                }
-            }
-            .enviromentObject(appViewModel)
+            RootView()
+                .environmentObject(authViewModel)
         }
     }
 }
