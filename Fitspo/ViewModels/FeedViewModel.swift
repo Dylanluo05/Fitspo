@@ -29,20 +29,24 @@ class FeedViewModel: ObservableObject {
                     return
                 }
                 
-                self.posts = documents.compactMap { doc in
+                self.posts = documents.compactMap { doc -> Post? in
                     let data = doc.data()
                     
                     guard let userId = data["userId"] as? String,
+                          let title = data["title"] as? String,
                           let imageUrl = data["imageUrl"] as? String,
                           let caption = data["caption"] as? String,
+                          let hashtags = data["hashtags"] as? [String],
                           let timestamp = data["timestamp"] as? Timestamp
                     else { return nil }
                     
                     return Post(
                         id: doc.documentID,
                         userId: userId,
+                        title: title,
                         imageUrl: imageUrl,
                         caption: caption,
+                        hashtags: hashtags,
                         timestamp: timestamp.dateValue()
                     )
                 }

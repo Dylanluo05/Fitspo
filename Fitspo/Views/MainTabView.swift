@@ -17,7 +17,7 @@ struct MainTabView: View {
                     Text("Home")
                 }
             
-            ExploreView()
+            FeedView()
                 .tabItem {
                     Image(systemName: "magnifyingglass")
                     Text("Explore")

@@ -13,15 +13,38 @@ struct FeedView: View {
     
     var body: some View {
         NavigationStack {
-            ScrollView {
-                VStack(spacing: 20) {
-                    ForEach(viewModel.posts) { post in
-                        PostCard(post: post)
+            Group {
+                if viewModel.posts.isEmpty {
+                    VStack(spacing: 12) {
+                        Image(systemName: "photo.on.rectangle.angled")
+                            .font(.system(size: 48))
+                            .foregroundColor(.gray)
+                        
+                        Text("No posts yet")
+                            .font(.headline)
+                        
+                        Text("Be the first to share a fit inspo")
+                            .font(.subheadline)
+                            .foregroundColor(.gray)
+                    }
+                    .padding()
+                } else {
+                    ScrollView {
+                        VStack(spacing: 20) {
+                            ForEach(viewModel.posts) { post in
+                                PostCard(post: post)
+                            }
+                        }
+                        .padding()
                     }
                 }
-                .padding()
             }
-            .navigationTitle("Feed")
+            .navigationTitle("Explore")
+            .toolbar {
+                NavigationLink(destination: CreatePostView()) {
+                    Image(systemName: "plus")
+                }
+            }
         }
     }
 }
