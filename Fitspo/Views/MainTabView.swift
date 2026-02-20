@@ -28,6 +28,12 @@ struct MainTabView: View {
                     Image(systemName: "person.fill")
                     Text("Profile")
                 }
+            
+            DetectionView()
+                .tabItem {
+                    Image(systemName: "chart.bar")
+                    Text("Analysis")
+                }
         }
     }
 }
